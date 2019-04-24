@@ -1,7 +1,7 @@
 {
-  "name": "restaurant-api",
+  "name": "foodtruck-api",
   "version": "0.0.1",
-  "description": "Restaurant API",
+  "description": "Foodtruck API",
   "main": "dist",
   "scripts": {
     "dev": "SET NODE_ENV=development & nodemon -w src --exec \"babel-node src --presets es2015,stage-0\"",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChristopherEdynak/restaurant-api.git"
+    "url": "git+https://github.com/ChristopherEdynak/Foodtrucks.git"
   },
   "eslintConfig": {
     "parserOptions": {
@@ -31,9 +31,9 @@
   "author": "Christopher Edynak",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ChristopherEdynak/restaurant-api/issues"
+    "url": "https://github.com/ChristopherEdynak/Foodtrucks/issues"
   },
-  "homepage": "https://github.com/ChristopherEdynak/restaurant-api#readme",
+  "homepage": "https://github.com/ChristopherEdynak/Foodtrucks#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
