@@ -15,7 +15,7 @@ export default({ config, db }) => {
             if (err) {
                 res.setEncoding(err);
             }
-            res.json({ message: 'Restaurant saved successfully' });
+            res.json({ message: 'The new restaurant was successfully saved!' });
         });
     });
     // '/v1/restaurant' - Read\Get
@@ -30,7 +30,7 @@ export default({ config, db }) => {
 
     // '/v1/restaurant/:id' -Read\Get by ID
     api.get('/:id', (req, res) => {
-        Restaurant.findById(req.params.id, (err, restaurant) =>{
+        Restaurant.findById(req.params.id, (err, restaurant) => {
             if (err) {
                 res.send(err);
             }
@@ -49,8 +49,20 @@ export default({ config, db }) => {
                 if (err) {
                     res.send(err);
                 }
-                res.json({ message: "Restaurant info has been successfully updated" });
+                res.json({ message: "The restaurant info has been successfully updated!" });
             });
+        });
+    });
+
+    // 'v1/restaurant/:id' - Delete
+    api.delete('/:id', (req, res) => {
+        Restaurant.remove({
+            _id:req.params.id
+        }, (err, restaurant) => {
+          if (err) {
+              res.send(err);
+          }
+          res.json({ message: "The restaurant was successfully removed!"});
         });
     });
 
