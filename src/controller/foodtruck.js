@@ -95,5 +95,16 @@ export default({ config, db }) => {
         });
     });
 
+    //get all reviews for a particular foodtruck by id
+    // 'v1/foodtruck/reviews/:id'
+    api.get('/reviews/:id', (req, res) => {
+        Review.find({foodtruck: req.params.id}, (err, reviews) => {
+            if (err) {
+                res.send(err);
+            }
+            res.json(reviews)
+        });
+    });
+
     return api;
 }
